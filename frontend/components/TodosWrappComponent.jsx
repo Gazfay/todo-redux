@@ -5,7 +5,6 @@ import FilterComponent from './FilterComponent.jsx';
 
 
 const TodosWrappComponent = ({todos, addTodo, toggleTodo, deleteTodo, setVisibleFilter, filter, editTodo}) => {
-  console.log(filter);
   return (
     <div>
       <AddInputComponent addTodo={addTodo} />

@@ -7,7 +7,6 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var initWebpack = require('./utils/WebpackUtil');
-var fallback = require('express-history-api-fallback')
 
 var app = express();
 
@@ -22,15 +21,12 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-// var rootRoute = __dirname + '/public';
 
 initWebpack(app);
 
 app.get("*", function(req, res) {
   res.sendfile(path.join(__dirname, 'public', 'index.html'));
 });
-
-// app.use(fallback('index.html', { root: rootRoute }))
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

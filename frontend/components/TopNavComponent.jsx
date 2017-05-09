@@ -3,7 +3,6 @@ import { Link } from 'react-router';
 import classnames from 'classnames';
 
 const TopNavComponent = ({routerData}) => {
-  console.log(routerData, 'Path');
 
   return (
     <nav className="navbar navbar-default">

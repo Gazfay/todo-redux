@@ -23,7 +23,6 @@ const getVisibleTodos = (todos, filter) => {
 }
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(state, ownProps, 'props');
   return {
     todos: getVisibleTodos(state.todos, state.filter),
     filter: state.filter
@@ -31,7 +30,6 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
-  console.log(deleteTodo);
   return {
     addTodo:(text) => {
       dispatch(addTodo(text));

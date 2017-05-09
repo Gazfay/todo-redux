@@ -3,7 +3,6 @@ import moment from 'moment';
 import classnames from 'classnames';
 
 const FilterComponent = ({filter, setVisibleFilter}) => {
-  console.log(filter);
   const changeFilter = (filter) =>{
     setVisibleFilter(filter);
   }

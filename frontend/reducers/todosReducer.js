@@ -3,7 +3,7 @@ import {ADD_TODO, DELETE_TODO, TOGGLE_TODO, EDIT_TODO} from '../constants/TodoCo
 
 const initialState = [];
 
-export default function todosReducer(state = initialState, action) {
+export default function todosReducer(state = initialState, action = {type: ''}) {
   switch (action.type) {
     case ADD_TODO:
       return [

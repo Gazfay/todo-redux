@@ -5,8 +5,6 @@ const TodoListComponent = ({ todos, toggleTodo, deleteTodo, filter, editTodo }) 
 
   const renderTodos = (todos) => {
     if (!!todos.length) {
-
-      console.log(filter, 'filter');
       todos.filter((todo) => {
         if (filter == 'SHOW_ALL'){
           return todo;

@@ -9,7 +9,6 @@ class AddInputComponent extends Component {
 
     this.setInputValue = this.setInputValue.bind(this);
     this.addTodo = this.addTodo.bind(this);
-    this.enterAdd = this.enterAdd.bind(this);
   }
 
   setInputValue(e) {
@@ -24,17 +23,13 @@ class AddInputComponent extends Component {
     }
   }
 
-  enterAdd(e) {
-    console.log(e.key);
-  }
-
   render() {
     return (
       <div className="row">
         <div className="col-md-6 col-md-push-3">
           <form onSubmit={this.addTodo}>
             <div className="input-group">
-              <input type="text" className="form-control" placeholder="Task text" value={this.state.text} onKeyPress={this.enterAdd} onChange={this.setInputValue}/>
+              <input type="text" className="form-control" placeholder="Task text" value={this.state.text} onChange={this.setInputValue}/>
               <span className="input-group-btn">
                 <button className="btn btn-default" type="submit">add</button>
               </span>

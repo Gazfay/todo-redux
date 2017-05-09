@@ -3,16 +3,16 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: [
+    'react-hot-loader/patch',
     'webpack-hot-middleware/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
     'babel-polyfill',
-    'react-hot-loader/patch',
     './frontend/index.js'
   ],
 
   output: {
-    path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
+    path: path.join(__dirname, 'public'),
     publicPath: '/'
   },
 
@@ -21,6 +21,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         use: ['babel-loader'],
+        include: path.join(__dirname, 'frontend'),
         exclude: /node_modules/
       },
       {
